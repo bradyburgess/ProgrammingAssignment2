@@ -41,15 +41,3 @@ cacheSolve <- function(z, ...) {
   cached.matrix 
 }
 
-fxn.test <- function() {
-  the.input <- matrix(c(2, 2, 3, 2), nrow = 2)
-  mcm <- makeCacheMatrix(the.input)
-  mcm$set(matrix(c(-1, 1, 1.5, -1), nrow = 2))
-  invm <- cacheSolve(mcm)
-  invm <- cacheSolve(mcm)
-  print(invm)
-  mcm <- makeCacheMatrix(invm)
-  invm <- cacheSolve(mcm)
-  invm <- cacheSolve(mcm)
-  print(invm)
-}
